@@ -502,7 +502,7 @@ checkbox.white[checked] .wx-checkbox-input, radio.white[checked] .wx-radio-input
 
 .shadow-warp {
   position: relative;
-  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
 }
 
 .shadow-warp:before, .shadow-warp:after {
