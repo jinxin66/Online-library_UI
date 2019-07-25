@@ -1,0 +1,54 @@
+/* pages/start/start.wxss */
+page{
+  padding-top: 32px;
+  background-color: white;
+}
+.con{
+  position: relative;
+  display: -webkit-flex;
+  flex-direction: column;
+} 
+.con-image{
+  margin-top: 100rpx;
+  height: 400rpx;
+}
+.con-image image{
+  width: 100%;
+  height: 100%;
+}
+.con-text{
+  position: relative;
+  bottom: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 36rpx;
+}
+.con-circle{
+  position: absolute;
+  right: 24rpx;
+  top: -48rpx;
+  background-color: rgba(175, 175, 175, 0.4);
+  height: 72rpx;
+  width: 72rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 64rpx;
+  color: #888;
+}
+.btn{
+  position: absolute;
+  bottom: 100rpx;
+  height: 100rpx;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  font-size: 32rpx;
+  background-color: #f1f1f1;
+  border-radius: 16rpx;
+  border: 4rpx solid #0f0f0f;
+  letter-spacing: 3rpx;
+}

@@ -1,0 +1,89 @@
+<!--pages/user/user.wxml-->
+<view class="cu-custom bg-white" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px; background: url(/images/waveBg.png);">
+    <navigator class='action border-custom' open-type="navigateBack" delta="1" hover-class="none" style='width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px)'>
+      <text class='icon-back lg' style='color:black;'></text>
+    </navigator>
+    <view class='content' style='top:{{StatusBar}}px;'>我的</view>
+  </view>
+</view>
+
+<view class='UCenter-bg' style='background: url(/images/waveBg.jpg);'>
+  <view class='justify-center' wx:if="{{isLogin}}">
+    <view class="cu-avatar round xl" style="margin-left:20%;background-image:url({{userInfo.avatarUrl}});">
+      <view class="cu-tag badge {{userInfo.gender==1?'icon-male bg-blue':'icon-female bg-pink'}}"></view>
+    </view>
+    <view class='margin-top text-center'>
+      <text class='text-xl'>{{userInfo.nickName}}</text>
+    </view>
+    <view class='margin-top-sm text-center'>
+      <text class='text-sm'>一段较长的的个性签名</text>
+    </view>
+  </view>
+  <button wx:if="{{!isLogin}}" class='loginBtn' open-type = "getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
+  <image src='/images/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+</view>
+
+<scroll-view scroll-x class="bg-white nav margin-top">
+  <view class='flex text-center'>
+    <view class="cu-item flex-sub {{TabCur==1?'text-xl text-black cur':''}}" bindtap='tabSelect' data-id="1">收藏</view>
+    <view class="cu-item flex-sub {{TabCur==2?'text-xl text-black cur':''}}" bindtap='tabSelect' data-id="2">已借阅</view>
+    <view class="cu-item flex-sub {{TabCur==3?'text-xl text-black cur':''}}" bindtap='tabSelect' data-id="3">借阅记录</view>
+  </view>
+</scroll-view>
+
+<!-- 导航对应的卡片 -->
+<view class='bg-white shadow'>
+  <!--收藏-->
+  <view class="cu-card article {{isCard?'no-card':''}}" wx:if="{{TabCur==1}}">
+    <view class="cu-item shadow" wx:for="{{4}}" wx:key bindtap='toBookInfo'>
+      <view class="title">架构探险：从零开始写分布式服务框架</view>
+      <view class="content">
+        <image src="http://img3m2.ddimg.cn/23/26/25114442-1_w_3.jpg" mode="aspectFill"></image>
+        <view class="desc">
+          <view class='text-content'> 一线实战技术专家全方位解析分布式服务框架底层技术细节，手把手教你搭建一个完整的符合自身需求的分布式服务框架</view>
+          <view>
+            <view class='cu-tag bg-red light sm round'>tag</view>
+            <view class='cu-tag bg-green light sm round'>IT</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--已借阅-->
+  <view class="cu-card article {{isCard?'no-card':''}}" wx:if="{{TabCur==2}}">
+    <view class="cu-item shadow" wx:for="{{3}}" wx:key bindtap='toBookInfo'>
+      <view class="title">架构探险：从零开始写分布式服务框架</view>
+      <view class="content">
+        <image src="http://img3m2.ddimg.cn/23/26/25114442-1_w_3.jpg" mode="aspectFill"></image>
+        <view class="desc">
+          <view class='text-content'> 一线实战技术专家全方位解析分布式服务框架底层技术细节，手把手教你搭建一个完整的符合自身需求的分布式服务框架</view>
+          <view>
+            <view class='cu-tag bg-red light sm round'>tag</view>
+            <view class='cu-tag bg-green light sm round'>IT</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+    
+  <!--借阅记录-->
+  <view class="cu-card article {{isCard?'no-card':''}}" wx:if="{{TabCur==3}}">
+    <view class="cu-item shadow" wx:for="{{2}}" wx:key bindtap='toBookInfo'>
+      <view class="title">架构探险：从零开始写分布式服务框架</view>
+      <view class="content">
+        <image src="http://img3m2.ddimg.cn/23/26/25114442-1_w_3.jpg" mode="aspectFill"></image>
+        <view class="desc">
+          <view class='text-content'>一线实战技术专家全方位解析分布式服务框架底层技术细节，手把手教你搭建一个完整的符合自身需求的分布式服务框架</view>
+          <view>
+            <view class='cu-tag bg-red light sm round'>tag</view>
+            <view class='cu-tag bg-green light sm round'>IT</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='cu-tabbar-height'></view>

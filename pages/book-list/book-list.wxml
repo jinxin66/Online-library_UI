@@ -1,0 +1,19 @@
+<!--pages/book-list/book-list.wxml-->
+<view class="cu-custom bg-white" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px; background: url(/images/BasicsBg.png);">
+    <navigator class='action border-custom' open-type="navigateBack" delta="1" hover-class="none" style='width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px)'>
+      <text class='icon-back lg' style='color:black;'></text>
+    </navigator>
+    <view class='content' style='top:{{StatusBar}}px;'>图书馆·藏经阁</view>
+  </view>
+</view>
+
+<view class="cu-card">
+  <view class="cu-item bg-img shadow-blur" style="background-image:url({{item.img}})" bindtap="toChild" data-url="{{item.url}}" wx:for="{{list}}" wx:key>
+    <view class="cardTitle">
+      {{item.title}}
+    </view>
+  </view>
+</view>
+
+<view class='cu-tabbar-height'></view>

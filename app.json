@@ -1,0 +1,54 @@
+{
+  "pages":[
+
+    "pages/start/start",
+    "pages/login/login",
+    "pages/home/home",
+"pages/index/index",
+    "pages/news/news",
+    "pages/news-detail/news-detail",
+
+    "pages/book-type/book-type",
+    "pages/book-list/book-list",
+    "pages/book-info/book-info",
+    
+    "pages/user/user",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarTitleText": "Online-library",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#eee"
+  },
+  "usingComponents": {},
+  "tabBar":{
+    "custom": true,
+    "color": "#aaa",
+    "selectedColor": "#39b54a",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list":[
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "/images/tabbar/home_normal.png",
+        "selectedIconPath": "/images/tabbar/home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "/images/tabbar/search_normal.png",
+        "selectedIconPath": "/images/tabbar/search_selected.png",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "/images/tabbar/user_normal.png",
+        "selectedIconPath": "/images/tabbar/user_selected.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

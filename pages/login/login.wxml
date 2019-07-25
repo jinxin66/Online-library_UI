@@ -1,0 +1,18 @@
+<!--pages/login/login.wxml-->
+<view class='con' style='background: url(/images/login_bg.jpg);'>
+  <view class='con-image'>
+    <image src='/images/icon_with_bg.png' mode='aspectFit'></image>
+    <view class='con-text'>欢迎使用图书借阅系统</view>
+    <view class='con-text' style='font-size:28rpx;margin-top:2rpx;'>不删档内测</view>
+  </view>
+</view>
+
+<view class='inputBox'>
+    <input type='text' placeholder='请输入用户名' class='input-txt'></input>
+    <input type='password' placeholder='请输入密码' class='input-txt'></input>
+</view>
+
+<view class='btn align-center'>
+  <button class='btn1' bindtap='loginBy'><text space='ensp'>登    录</text></button>
+  <button class='btn2' bindtap='loginByWechat'>微信登录</button>
+</view>

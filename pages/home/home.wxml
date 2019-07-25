@@ -1,0 +1,67 @@
+<!--pages/home/home.wxml-->
+<view class="cu-custom bg-white" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px; background: url(/images/BasicsBg.png);">
+    <navigator class='action border-custom' open-type="navigateBack" delta="1" hover-class="none" style='width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px)'>
+      <text class='icon-back lg' style='color:black;'></text>
+    </navigator>
+    <view class='content' style='top:{{StatusBar}}px;'>首页</view>
+  </view>
+</view>
+
+<view class='findBox bg-white'>
+  <view class='search'>
+    <view class='search-form round'>
+      <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search" placeholder-class='inputword-place'></input>
+    </view>
+  </view>
+  <view class='sao-icon' bindtap='toSearch'>
+    <image src='/images/tabbar/search_icon.png' mode='aspectFit'></image>
+  </view>
+  <view class='sao-icon' bindtap='toScan'>
+    <image src='/images/tabbar/scan_normal.png' mode='aspectFit'></image>
+  </view>
+</view>
+
+<view class='recommend-box margin-top bg-white'>
+  <view class='recommend-top'>
+    <text>热门书籍</text>
+    <text style='color:#aaa;float:right;' space='ensp' bindtap='toAllPop'>
+      查看全部<text class='icon-right'></text>
+    </text>
+  </view>
+  <view class="tower-swiper bg-white" bindtouchmove="towerMove" bindtouchstart="towerStart" bindtouchend="towerEnd">
+    <view class='tower-item {{item.zIndex==1?"none":""}}' wx:for="{{towerList}}" wx:key style='transform: scale({{0.5+item.zIndex/10}});margin-left:{{item.mLeft*100-150}}rpx;z-index:{{item.zIndex}}'>
+      <view class='bg-img shadow-blur' style="background-image:url({{item.url}})"></view>
+    </view>
+  </view>
+</view>
+
+<view class='recommend-box margin-top bg-white'>
+  <view class='recommend-top'>
+    <text>图书分类</text>
+    <text style='color:#aaa;float:right;' space='ensp' bindtap='toAllType'>
+      查看全部<text class='icon-right'></text>
+    </text>
+  </view>
+  <scroll-view class='recommend-book' scroll-x bindscrolltolower='toAllType'>
+    <view class='recommend-book-item' wx:for='{{book_types}}' wx:key>
+    {{item.name}}
+    </view>
+  </scroll-view>
+</view>
+
+<view class='recommend-box margin-top bg-white'>
+  <view class='recommend-top'>
+    <text>猜你喜欢</text>
+    <text style='color:#aaa;float:right;' space='ensp' bindtap='toAllLike'>
+      查看全部<text class='icon-right'></text>
+    </text>
+  </view>
+  <swiper class="card-swiper" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper">
+    <swiper-item class="{{cardCur==index?'cur':''}}" wx:for="{{may_likes}}" wx:key>
+      <view class='bg-img shadow-blur' style="background-image:url({{item.url}})"></view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class='cu-tabbar-height'></view>

@@ -1,0 +1,58 @@
+/* pages/home/home.wxss */
+.findBox{
+  width: 100%;
+  padding: 16rpx;
+  display: -webkit-inline-flex;
+}
+.search{
+  background-color: rgb(246, 246, 246);
+  height: 80rpx;
+  border-radius: 44rpx;
+}
+.search input{
+  width: 500rpx;
+  position: relative;
+  left: 16rpx;
+  top: 16rpx;
+}
+.inputword-place{
+  font-size: 32rpx;
+}
+.sao-icon{
+  margin-left: 36rpx;
+  margin-top: 16rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.sao-icon image{
+  width: 100%;
+  height: 100%;
+}
+.recommend-box{
+  padding-top:26rpx; 
+  padding-bottom: 26rpx;
+}
+.recommend-top{
+  padding-left: 36rpx;
+  padding-right: 36rpx;
+  font-size: 32rpx;
+}
+.recommend-book{
+  height: 275rpx;
+  padding-top: 26rpx;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.recommend-book-item{
+  margin-left: 26rpx;
+  background-color: rgba(245, 245, 245,0.9);
+  border-radius: 22rpx;
+  width: 250rpx;
+  height: 250rpx;
+  box-shadow: 0rpx 0rpx 20rpx rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+.recommend-book-item imag{
+  width: 100%;
+  height: 100%;
+}

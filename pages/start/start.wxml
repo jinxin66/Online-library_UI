@@ -1,0 +1,12 @@
+<!--pages/start/start.wxml-->
+<view class='con'>
+  <view class='con-circle'>{{countdown}}s</view>
+  <view class='con-image'>
+    <image src='/images/icon_without_bg.png' mode='aspectFit'></image>
+  </view>
+  <view class='con-text'>图书借阅系统</view>
+</view>
+
+<view class='btn'>
+  <button bindtap='toLogin' size='mini'>立即进入</button>
+</view>

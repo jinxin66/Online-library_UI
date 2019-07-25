@@ -1,0 +1,19 @@
+<!--pages/book-type/book-type.wxml-->
+<view class="cu-custom bg-white" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px; background: url(/images/BasicsBg.png);">
+    <navigator class='action border-custom' open-type="navigateBack" delta="1" hover-class="none" style='width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px)'>
+      <text class='icon-back lg' style='color:black;'></text>
+    </navigator>
+    <view class='content' style='top:{{StatusBar}}px;'>图书分类列表</view>
+  </view>
+</view>
+
+<view class='nav-list margin-top'>
+  <navigator hover-class='none' url="../{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" style='animation: show {{(index+1)*0.2+1}}s 1;-webkit-animation: show {{(index+1)*0.2+1}}s 1;' wx:for="{{elements}}" wx:key>
+    <view class="nav-title">{{item.title}}</view>
+    <view class="nav-name">{{item.name}}</view>
+    <text class='icon-{{item.icon}}'></text>
+  </navigator>
+</view>
+
+<view class='cu-tabbar-height'></view>

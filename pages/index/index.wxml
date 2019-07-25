@@ -1,0 +1,60 @@
+<!--pages/login/login.wxml-->
+<view class="cu-custom bg-white" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px; background: url(/images/BasicsBg.png);">
+    <navigator class='action border-custom' open-type="navigateBack" delta="1" hover-class="none" style='width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px)'>
+      <text class='icon-back lg' style='color:black;'></text>
+    </navigator>
+    <view class='content' style='top:{{StatusBar}}px;'>图书馆·藏经阁</view>
+  </view>
+</view>
+
+<view class='nav-list margin-top'>
+  <navigator hover-class='none' url="../{{item.name}}/{{item.name}}" class="nav-li bg-{{item.color}}" style='animation: show {{(index+1)*0.2+1}}s 1;-webkit-animation: show {{(index+1)*0.2+1}}s 1;' wx:for="{{elements}}" wx:key>
+    <view class="nav-title">{{item.title}}</view>
+    <view class="nav-name">{{item.name}}</view>
+    <text class='icon-{{item.icon}}'></text>
+  </navigator>
+</view>
+
+<view class='cu-tabbar-height'></view>
+
+<view class="cu-card">
+  <view class="cu-item bg-img shadow-blur" style="background-image:url({{item.img}})" bindtap="toChild" data-url="{{item.url}}" wx:for="{{list}}" wx:key>
+    <view class="cardTitle">
+      {{item.title}}
+    </view>
+  </view>
+</view>
+
+<view class='cu-tabbar-height'></view>
+
+<view class="bg-video bg-mask">
+  <video src='https://www.weilanwl.com/theme/wl/assets/images/slider1.mp4' autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"></video>
+  <cover-view class='padding-xl text-white'>
+    <cover-view class='padding-xs text-xl'>
+      开源是创新的动力之源
+    </cover-view>
+    <cover-view class='padding-xs'>
+      Open Source is the Power Source of Innovation
+    </cover-view>
+  </cover-view>
+</view>
+
+<view class='cu-tabbar-height'></view>
+
+<view class='grid col-2 padding-sm'>
+  <view class='padding-sm'>
+    <view class="bg-img padding-bottom-xl" style="background-image: url('https://image.weilanwl.com/img/square-3.jpg')">
+      <view class='bg-shadeTop padding padding-bottom-xl'>
+        上面开始
+      </view>
+    </view>
+  </view>
+  <view class='padding-sm'>
+    <view class="bg-img padding-top-xl" style="background-image: url('https://image.weilanwl.com/img/square-3.jpg')">
+      <view class='bg-shadeBottom padding padding-top-xl '>
+        下面开始
+      </view>
+    </view>
+  </view>
+</view>
